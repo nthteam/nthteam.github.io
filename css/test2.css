@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:white;
+    margin: 15%;
+    margin-top: 0;
+    margin-bottom:700px;
+    padding: 0;
+}
+h1{
+    margin :30px 0 10px 0 ;
+    color: #404040;
+    font-size:24px;
+}
+img{
+    width: 100%;
+    border-radius: 15px;
+}
+@keyframes menu{
+    0%{background-color: rgb(67, 205, 230) ;}
+    20%{background-color: lightblue;}
+    40%{background-color: lightgreen;}
+    60%{background-color: rgb(34, 228, 34);}
+    80%{background-color: lightgreen;}
+    100%{background-color: lightblue;}
+}
+#main-menu{
+    position: relative;
+    box-sizing: border-box;;
+    padding-top: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:'Raleway', Arial, sans-serif ;
+    margin:0px 0px 30px 0px;
+    text-align: center;
+    border-radius: 15px;
+    width: 100%;
+    height:60px;
+}
+#main-menu a{
+    margin:40px;
+    font-size:20px;
+    color:rgb(245, 84, 35);
+    text-decoration:none;
+}
+#main-menu >a:first-child >img{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    padding: 4px;
+    background-color:rgb(67, 205, 230);
+    border-radius: 50%;
+    top:-120px;
+    left:25px;
+}
+#main-menu a:first-child>img , #main-menu{
+    animation: menu 10s infinite;
+}
+#main-menu a:hover,#main-menu a:active {
+    color:rgb(21, 19, 139);
+}
+#main-menu a.active{
+    font-weight: bold;
+}
+.pc{
+    display:block;
+    position: relative;
+    float :left; 
+    vertical-align:middle;
+    max-width:33.3%;
+    overflow: hidden; 
+    border-radius: 15px;
+}
+.pc >a >img{ 
+    vertical-align:middle;
+    height:200px;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    padding:2px;
+}
+.pc:hover >a >img{
+  opacity: 0.2;
+  transform: scale(1.2);
+}
+.pc .name{
+    font-weight:bold;   
+    font-size:18px;
+    font-family: 'Raleway', Arial, sans-serif;
+    color:rgb(233, 37, 37);
+    padding-top:30%;
+    padding-left: 15px;
+    border-radius: 15px;
+    margin:2px;
+    position:absolute;
+    max-width:100%;
+    height:200px;
+    bottom:-100%;
+    left:200px;
+    opacity: 0;  
+    transition: all 0.3s;
+}
+.pc:hover .name{
+    bottom:0;
+    left:0;
+    opacity: 1;
+}
+.messenger{
+    position: fixed;
+    right:0;
+    bottom:5px;
+}
+.messenger >a >img {
+    width:140px;
+    height:80px;
+}
